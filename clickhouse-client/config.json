@@ -7,7 +7,9 @@
     "arch": ["amd64"],
     "init": false,
     "options": {
-        "pg_host": "192.168.100.237:5432",
+        "db_name": "home",
+        "pg_host": "192.168.100.237",
+        "pg_port": "5432",
         "pg_db": "homeassistant",
         "pg_user": "homeassistant",
         "pg_pass": "homeassistant",
@@ -15,7 +17,9 @@
         "ch_port": "9000"
   },
     "schema": {
+        "db_name": "str",
         "pg_host": "str",
+        "pg_port": "str",
         "pg_db": "str",
         "pg_user": "str",
         "pg_pass": "str",
