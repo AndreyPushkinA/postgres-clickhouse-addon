@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Clickhouse client add-on for Home Assitant
+url: 'https://github.com/AndreyPushkinA/postgress-addon'
+maintainer: Awesome Maintainer <andrey.a.pushkin@gmail.com>
