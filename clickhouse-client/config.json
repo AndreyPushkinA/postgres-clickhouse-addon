@@ -6,10 +6,10 @@
     "url": "https://github.com/AndreyPushkinA/clickhouse-client-addon",
     "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
     "init": false,
-    "ha_host": "your_home_assistant_host",
-    "port": "your_clickhouse_port",
-    "postgres_host": "your_postgres_host",
-    "postgres_database": "your_postgres_database",
-    "postgres_user": "your_postgres_user",
-    "postgres_password": "your_postgres_password"
+    "options":
+        "ha_host": "your_home_assistant_host",
+        "port": "your_clickhouse_port",
+        "postgres_database": "your_postgres_database",
+        "postgres_user": "your_postgres_user",
+        "postgres_password": "your_postgres_password"
 }
