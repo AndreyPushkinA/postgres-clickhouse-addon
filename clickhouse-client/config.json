@@ -1,0 +1,30 @@
+name: Clickhouse client
+version: 0.0.1
+slug: clickhouse-client
+description: Clickhouse client for Home Assistant
+url: https://github.com/hassio-addons/addon-appdaemon
+webui: http://[HOST]:[PORT:5050]
+arch:
+- aarch64
+- amd64
+- armhf
+- armv7
+- i386
+init: false
+homeassistant_api: true
+uart: true
+ports:
+  5050/tcp: 5050
+ports_description:
+  5050/tcp: AppDaemon
+map:
+- config:rw
+- share:rw
+- media:rw
+- ssl
+options:
+  init_commands: []
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  init_commands:
+  - str
