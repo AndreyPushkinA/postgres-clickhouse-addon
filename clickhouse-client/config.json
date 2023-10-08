@@ -5,5 +5,13 @@
     "description": "PostgreSQL to Clickhouse addon Home Assistant",
     "url": "https://github.com/AndreyPushkinA/clickhouse-client-addon",
     "arch": ["amd64"],
-    "init": false
+    "init": false,
+    "options": {
+        "pg_host": "192.168.100.237:5432",
+        "pg_db": "homeassistant",
+        "pg_user": "homeassistant",
+        "pg_pass": "homeassistant",
+        "ch_host": "192.168.100.237",
+        "ch_port": "9000"
+  }
 }
