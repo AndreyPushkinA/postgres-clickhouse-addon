@@ -1,18 +1,15 @@
 {
-  "name": "Clickhouse client",
-  "version": "0.0.1",
-  "slug": "clickhouse-client",
-  "description": "Clickhouse client for Home Assistant",
-  "url": "https://github.com/AndreyPushkinA/clickhouse-client-addon",
-  "webui": "http://[HOST]:[PORT:5050]",
-  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
-  "init": false,
-  "homeassistant_api": true,
-  "uart": true,
-  "ports": {
-    "5050/tcp": 5050
-  },
-  "ports_description": {
-    "5050/tcp": "Web-based bash terminal"
-  }
+    "name": "Clickhouse client",
+    "version": "0.0.1",
+    "slug": "clickhouse-client",
+    "description": "Clickhouse client for Home Assistant",
+    "url": "https://github.com/AndreyPushkinA/clickhouse-client-addon",
+    "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
+    "init": false,
+    "ha_host": "your_home_assistant_host",
+    "port": "your_clickhouse_port",
+    "postgres_host": "your_postgres_host",
+    "postgres_database": "your_postgres_database",
+    "postgres_user": "your_postgres_user",
+    "postgres_password": "your_postgres_password"
 }
