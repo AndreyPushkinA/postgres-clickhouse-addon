@@ -1,9 +1,7 @@
 #!/bin/bash
 
-CONFIG_PATH="/data/options.json"
-
 get_option_value() {
-        grep -A 8 "\"options\"" $CONFIG_PATH | grep -m 1 "\"$1\"" | cut -d ':' -f2 | tr -d ' ",'
+        grep -A 8 "\"options\"" config.json | grep -m 1 "\"$1\"" | cut -d ':' -f2 | tr -d ' ",'
 }
 
 DB_NAME=$(get_option_value "db_name")
