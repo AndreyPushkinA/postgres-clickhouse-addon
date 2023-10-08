@@ -13,6 +13,12 @@ PG_PASS=$(get_option_value "pg_pass")
 CH_HOST=$(get_option_value "ch_host")
 CH_PORT=$(get_option_value "ch_port")
 
+echo "CH_PORT value is: '${DB_NAME}'"
+echo "CH_PORT value is: '${PG_HOST}'"
+echo "CH_PORT value is: '${PG_PORT}'"
+echo "CH_PORT value is: '${PG_DB}'"
+echo "CH_PORT value is: '${PG_USER}'"
+echo "CH_PORT value is: '${PG_PASS}'"
 echo "CH_PORT value is: '${CH_PORT}'"
 echo "CH_PORT value is: '${CH_HOST}'"
 
