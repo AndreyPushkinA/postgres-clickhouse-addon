@@ -15,4 +15,7 @@ PG_PASS=$(get_option_value "pg_pass")
 CH_HOST=$(get_option_value "ch_host")
 CH_PORT=$(get_option_value "ch_port")
 
+echo "CH_PORT value is: '${CH_PORT}'"
+echo "CH_PORT value is: '${CH_HOST}'"
+
 echo "CREATE DATABASE IF NOT EXISTS ${DB_NAME} ENGINE = MaterializedPostgreSQL('${PG_HOST}:${PG_PORT}', '${PG_DB}', '${PG_USER}', '${PG_PASS}');" | clickhouse-client --host ${CH_HOST} --port ${CH_PORT}
