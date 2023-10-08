@@ -1,7 +1,9 @@
-FROM yandex/clickhouse-client:latest
+FROM yandex/clickhouse-server:latest
 
-COPY clickhouse.sh .
+COPY clickhouse.sh /docker-entrypoint-initdb.d/startup_script.sh
 
-RUN chmod +x clickhouse.sh
+RUN chmod +x /docker-entrypoint-initdb.d/startup_script.sh
 
-CMD ["./clickhouse.sh"]
+ENTRYPOINT ["/docker-entrypoint-initdb.d/startup_script.sh"]
+
+EXPOSE 8124 9000
