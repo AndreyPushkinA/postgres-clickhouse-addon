@@ -13,5 +13,13 @@
         "pg_pass": "homeassistant",
         "ch_host": "192.168.100.237",
         "ch_port": "9000"
+  },
+    "schema": {
+        "pg_host": "str",
+        "pg_db": "str",
+        "pg_user": "str",
+        "pg_pass": "str",
+        "ch_host": "str",
+        "ch_port": "str"
   }
 }
