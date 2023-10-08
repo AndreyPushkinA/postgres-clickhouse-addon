@@ -1,13 +1,7 @@
 #!/bin/bash
 
-HA_HOST=$(jq -r '.ha_host' config.json)
-PORT=$(jq -r '.port' config.json)
-POSTGRES_DATABASE=$(jq -r '.postgres_database' config.json)
-POSTGRES_USER=$(jq -r '.postgres_user' config.json)
-POSTGRES_PASSWORD=$(jq -r '.postgres_password' config.json)
+clickhouse-client --host 192.168.100.237 --port 9001
 
-clickhouse-client --host $HA_HOST --port $PORT
+echo "SET allow_experimental_database_materialized_postgresql=1;" | clickhouse-client --host 192.168.100.237 --port 9001
 
-echo "SET allow_experimental_database_materialized_postgresql=1;" | clickhouse-client --host $HA_HOST --port $PORT
-
-echo "CREATE DATABASE clickhouse_db ENGINE = MaterializedPostgreSQL('$HA_HOST:5432', '$POSTGRES_DATABASE', '$POSTGRES_USER', '$POSTGRES_PASSWORD');" | clickhouse-client --host $HA_HOST --port $PORT
+echo "CREATE DATABASE IF NOT EXISTS clickhouse_db ENGINE = MaterializedPostgreSQL('192.168.100.237:5432', 'homeassistant', 'homeassistant', 'homeassistant');" | clickhouse-client --host 192.168.100.237 --port 9001
