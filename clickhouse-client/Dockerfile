@@ -1,3 +1,3 @@
 FROM yandex/clickhouse-client:latest
 
-EXPOSE 9002
+EXPOSE 5050
