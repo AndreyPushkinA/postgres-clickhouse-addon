@@ -4,6 +4,8 @@ get_option_value() {
         grep -A 8 "\"options\"" config.json | grep -m 1 "\"$1\"" | cut -d ':' -f2 | tr -d ' ",'
 }
 
+echo $OPTIONS_DB_NAME
+
 DB_NAME=$(get_option_value "db_name")
 PG_HOST=$(get_option_value "pg_host")
 PG_PORT=$(get_option_value "pg_port")
