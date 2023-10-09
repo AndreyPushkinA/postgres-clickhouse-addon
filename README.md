@@ -1,2 +1,2 @@
 # postgres-clickhouse-addon
-This repository contains test version of PostgreSQL to Clickhouse migration as Home Assistant addon.
+This repository contains PostgreSQL to Clickhouse migration as Home Assistant addon.
