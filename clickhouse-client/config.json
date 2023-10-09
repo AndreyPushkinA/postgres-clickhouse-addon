@@ -6,6 +6,8 @@
     "url": "https://github.com/AndreyPushkinA/clickhouse-client-addon",
     "arch": ["amd64"],
     "init": false,
+    "startup": "application",
+    "homeassistant_api": true,
     "options": {
         "db_name": null,
         "pg_host": null,
