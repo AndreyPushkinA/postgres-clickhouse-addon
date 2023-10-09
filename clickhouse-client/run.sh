@@ -1,10 +1,10 @@
 #!/bin/bash
 
-get_option_value() {
-        grep -A 8 "\"options\"" config.json | grep -m 1 "\"$1\"" | cut -d ':' -f2 | tr -d ' ",'
-}
+OPTIONS_PATH=/data/options.json
 
-echo $OPTIONS_DB_NAME
+get_option_value() {
+        grep -A 8 "\"options\"" $OPTIONS_PATH | grep -m 1 "\"$1\"" | cut -d ':' -f2 | tr -d ' ",'
+}
 
 DB_NAME=$(get_option_value "db_name")
 PG_HOST=$(get_option_value "pg_host")
