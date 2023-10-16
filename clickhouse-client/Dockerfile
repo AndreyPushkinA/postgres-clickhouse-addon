@@ -7,6 +7,6 @@ RUN sed -i 's|<!-- Maximum memory usage for processing single query, in bytes. -
 
 COPY ports.xml /etc/clickhouse-server/config.d/
 
-EXPOSE 8124 9000
+RUN /run.sh
 
-CMD [ "/run.sh" ]
+EXPOSE 8124 9000
