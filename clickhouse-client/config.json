@@ -8,10 +8,6 @@
     "init": false,
     "startup": "application",
     "homeassistant_api": true,
-    "ports": {
-        "8124": 8124,
-        "9000": 9000
-    },
     "options": {
         "db_name": null,
         "pg_host": null,
